@@ -1,0 +1,55 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\10547252_13172.jpg" />
+    <None Remove="Resources\12704528_5052228.jpg" />
+    <None Remove="Resources\1283683_721.jpg" />
+    <None Remove="Resources\25654472_abstract_low_poly_technology_design_background_2303.jpg" />
+    <None Remove="Resources\804616_preview.jpg" />
+    <None Remove="Resources\camera.png" />
+    <None Remove="Resources\robotic-arm.png" />
+    <None Remove="Resources\video.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MaterialDesignThemes" Version="5.1.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="OpenCvSharp4" Version="4.10.0.20240616" />
+    <PackageReference Include="OpenCvSharp4.runtime.win" Version="4.10.0.20240616" />
+    <PackageReference Include="OpenCvSharp4.WpfExtensions" Version="4.10.0.20240616" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\10547252_13172.jpg" />
+    <Resource Include="Resources\12704528_5052228.jpg" />
+    <Resource Include="Resources\1283683_721.jpg" />
+    <Resource Include="Resources\25654472_abstract_low_poly_technology_design_background_2303.jpg" />
+    <Resource Include="Resources\camera.png" />
+    <Resource Include="Resources\robotic-arm.png" />
+    <Resource Include="Resources\video.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>
